@@ -10,20 +10,21 @@ body{
     font-family: Arial;
     text-align: center;
     color: white;
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 h1{
-    font-size: 50px;
+    font-size: 45px;
 }
 
 button{
     background: #00ffcc;
     border: none;
-    padding: 15px 40px;
-    font-size: 22px;
-    border-radius: 12px;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 10px;
     cursor: pointer;
+    margin: 10px;
     transition: 0.3s;
 }
 
@@ -31,10 +32,17 @@ button:hover{
     background: #00cc99;
 }
 
-#info{
+.box{
     margin-top: 30px;
-    font-size: 24px;
+    font-size: 22px;
     display: none;
+}
+
+.copyMsg{
+    display: none;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #00ffcc;
 }
 </style>
 
@@ -45,15 +53,38 @@ button:hover{
 
 <button onclick="showServer()">دخول السيرفر</button>
 
-<div id="info">
-    <p>📡 IP : Andcraft-NnTr.aternos.me</p>
-    <p>🔌 Port : 11150</p>
+<div class="box" id="serverBox">
+
+<p>📡 IP : <span id="ip">and_craft_2030.aternos.me</span></p>
+<button onclick="copyIP()">نسخ IP</button>
+<div class="copyMsg" id="ipMsg">✅ تم نسخ IP</div>
+
+<p>🔌 Port : <span id="port">54860</span></p>
+<button onclick="copyPort()">نسخ البورت</button>
+<div class="copyMsg" id="portMsg">✅ تم نسخ البورت</div>
+
 </div>
 
 <script>
+
 function showServer(){
-    document.getElementById("info").style.display = "block";
+    document.getElementById("serverBox").style.display = "block";
 }
+
+function copyIP(){
+    let ip = document.getElementById("ip").innerText;
+    navigator.clipboard.writeText(ip);
+
+    document.getElementById("ipMsg").style.display = "block";
+}
+
+function copyPort(){
+    let port = document.getElementById("port").innerText;
+    navigator.clipboard.writeText(port);
+
+    document.getElementById("portMsg").style.display = "block";
+}
+
 </script>
 
 </body>
