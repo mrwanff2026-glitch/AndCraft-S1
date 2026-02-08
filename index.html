@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>AndCraft S1</title>
+
+<style>
+body{
+    background: linear-gradient(135deg,#141E30,#243B55);
+    font-family: Arial;
+    text-align: center;
+    color: white;
+    margin-top: 120px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+button{
+    background: #00ffcc;
+    border: none;
+    padding: 15px 40px;
+    font-size: 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #00cc99;
+}
+
+#info{
+    margin-top: 30px;
+    font-size: 24px;
+    display: none;
+}
+</style>
+
+</head>
+<body>
+
+<h1>🎮 AndCraft S1</h1>
+
+<button onclick="showServer()">دخول السيرفر</button>
+
+<div id="info">
+    <p>📡 IP : Andcraft-NnTr.aternos.me</p>
+    <p>🔌 Port : 11150</p>
+</div>
+
+<script>
+function showServer(){
+    document.getElementById("info").style.display = "block";
+}
+</script>
+
+</body>
+</html>
