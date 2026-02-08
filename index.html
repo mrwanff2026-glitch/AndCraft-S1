@@ -5,9 +5,17 @@
 <title>AndCraft S1</title>
 
 <style>
+
+/* تحميل الخط العربي */
+@font-face {
+    font-family: 'CairoCustom';
+    src: url("alfont_com_Cairo-Regular-2.ttf");
+}
+
+/* تصميم الصفحة */
 body{
     background: linear-gradient(135deg,#141E30,#243B55);
-    font-family: 'Cairo', sans-serif;
+    font-family: 'CairoCustom', sans-serif;
     text-align: center;
     color: white;
     margin-top: 80px;
@@ -49,12 +57,14 @@ button:hover{
     text-shadow: 0 0 10px #00ffee;
 }
 
-/* نصوص مزخرفة */
+/* نصوص عربية مزخرفة */
 .arabicDecor{
     font-weight: bold;
     font-size: 24px;
     text-shadow: 0 0 8px #00ffcc, 0 0 15px #00ffee;
 }
+
+/* رسائل النسخ */
 .copyMsg{
     display: none;
     margin-top: 10px;
