@@ -5,17 +5,9 @@
 <title>AndCraft S1</title>
 
 <style>
-
-/* تحميل الخط العربي والفرنسي */
-@font-face {
-    font-family: 'CairoCustom';
-    src: url("alfont_com_Cairo-Regular-2.ttf");
-}
-
-/* تصميم الصفحة */
 body{
     background: linear-gradient(135deg,#141E30,#243B55);
-    font-family: 'CairoCustom', sans-serif;
+    font-family: 'Cairo', sans-serif;
     text-align: center;
     color: white;
     margin-top: 80px;
@@ -35,57 +27,57 @@ button{
     background: linear-gradient(45deg,#00ffcc,#0099ff);
     border: none;
     padding: 14px 35px;
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 12px;
     cursor: pointer;
     margin: 10px;
     color: white;
     transition: 0.3s;
+    text-shadow: 0 0 8px #00ffee;
 }
 
 button:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 15px #00ffee;
+    box-shadow: 0 0 20px #00ffee;
 }
 
 /* صندوق السيرفر */
 .box{
     margin-top: 40px;
-    font-size: 24px;
+    font-size: 26px;
     display: none;
-}
-
-/* نص IP و Port */
-span{
-    color: #00ffee;
     text-shadow: 0 0 10px #00ffee;
 }
 
-/* رسالة النسخ */
+/* نصوص مزخرفة */
+.arabicDecor{
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 0 0 8px #00ffcc, 0 0 15px #00ffee;
+}
 .copyMsg{
     display: none;
-    margin-top: 8px;
+    margin-top: 10px;
     font-size: 18px;
     color: #00ff88;
 }
-
 </style>
-
 </head>
 <body>
 
 <h1>⚡ AndCraft S1 ⚡</h1>
 
-<button onclick="showServer()">🎮 دخول السيرفر</button>
+<!-- زر دخول مزخرف -->
+<button onclick="showServer()"><span class="arabicDecor">✦ دخول السيرفر ✦</span></button>
 
 <div class="box" id="serverBox">
 
-<p>📡 IP : <span id="ip">and_craft_2030.aternos.me</span></p>
-<button onclick="copyIP()">📋 نسخ IP</button>
+<p>📡 <span class="arabicDecor">IP السيرفر :</span> <span id="ip">and_craft_2030.aternos.me</span></p>
+<button onclick="copyIP()"><span class="arabicDecor">✦ نسخ الايبي ✦</span></button>
 <div class="copyMsg" id="ipMsg">✔ تم النسخ</div>
 
-<p>🔌 Port : <span id="port">54860</span></p>
-<button onclick="copyPort()">📋 نسخ البورت</button>
+<p>🔌 <span class="arabicDecor">البورت :</span> <span id="port">54860</span></p>
+<button onclick="copyPort()"><span class="arabicDecor">✦ نسخ البورت ✦</span></button>
 <div class="copyMsg" id="portMsg">✔ تم النسخ</div>
 
 </div>
