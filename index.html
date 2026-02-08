@@ -6,7 +6,7 @@
 
 <style>
 
-/* تحميل الخط العربي */
+/* تحميل الخط العربي المزخرف */
 @font-face {
     font-family: 'CairoCustom';
     src: url("alfont_com_Cairo-Regular-2.ttf");
@@ -28,6 +28,13 @@ h1{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 20px #00ffee;
+}
+
+/* جميع النصوص العربية مزخرفة */
+.arabicDecor{
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 0 0 8px #00ffcc, 0 0 15px #00ffee;
 }
 
 /* الأزرار */
@@ -57,13 +64,6 @@ button:hover{
     text-shadow: 0 0 10px #00ffee;
 }
 
-/* نصوص عربية مزخرفة */
-.arabicDecor{
-    font-weight: bold;
-    font-size: 24px;
-    text-shadow: 0 0 8px #00ffcc, 0 0 15px #00ffee;
-}
-
 /* رسائل النسخ */
 .copyMsg{
     display: none;
@@ -71,14 +71,22 @@ button:hover{
     font-size: 18px;
     color: #00ff88;
 }
+
 </style>
 </head>
 <body>
 
 <h1>⚡ AndCraft S1 ⚡</h1>
 
-<!-- زر دخول مزخرف -->
+<!-- زر دخول السيرفر في الموقع -->
 <button onclick="showServer()"><span class="arabicDecor">✦ دخول السيرفر ✦</span></button>
+
+<!-- زر فتح Minecraft مباشرة -->
+<p>
+<a href="minecraft://?server=and_craft_2030.aternos.me:54860" target="_blank">
+<button><span class="arabicDecor">🎮 فتح السيرفر في Minecraft</span></button>
+</a>
+</p>
 
 <div class="box" id="serverBox">
 
