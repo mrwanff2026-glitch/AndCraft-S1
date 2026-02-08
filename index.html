@@ -5,31 +5,33 @@
 <title>AndCraft S1</title>
 
 <style>
+
+@font-face {
+    font-family: CairoCustom;
+    src: url("Cairo.ttf");
+}
+
 body{
     background: linear-gradient(135deg,#141E30,#243B55);
-    font-family: Arial;
+    font-family: CairoCustom;
     text-align: center;
     color: white;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 h1{
     font-size: 45px;
+    color: #00ffee;
 }
 
 button{
     background: #00ffcc;
     border: none;
-    padding: 12px 30px;
+    padding: 14px 35px;
     font-size: 18px;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     margin: 10px;
-    transition: 0.3s;
-}
-
-button:hover{
-    background: #00cc99;
 }
 
 .box{
@@ -40,28 +42,28 @@ button:hover{
 
 .copyMsg{
     display: none;
-    margin-top: 10px;
-    font-size: 18px;
-    color: #00ffcc;
+    margin-top: 8px;
+    color: #00ff88;
 }
-</style>
 
+</style>
 </head>
+
 <body>
 
-<h1>🎮 AndCraft S1</h1>
+<h1>AndCraft S1</h1>
 
 <button onclick="showServer()">دخول السيرفر</button>
 
 <div class="box" id="serverBox">
 
-<p>📡 IP : <span id="ip">and_craft_2030.aternos.me</span></p>
+<p>IP : <span id="ip">and_craft_2030.aternos.me</span></p>
 <button onclick="copyIP()">نسخ IP</button>
-<div class="copyMsg" id="ipMsg">✅ تم نسخ IP</div>
+<div class="copyMsg" id="ipMsg">تم النسخ</div>
 
-<p>🔌 Port : <span id="port">54860</span></p>
+<p>Port : <span id="port">54860</span></p>
 <button onclick="copyPort()">نسخ البورت</button>
-<div class="copyMsg" id="portMsg">✅ تم نسخ البورت</div>
+<div class="copyMsg" id="portMsg">تم النسخ</div>
 
 </div>
 
@@ -72,16 +74,16 @@ function showServer(){
 }
 
 function copyIP(){
-    let ip = document.getElementById("ip").innerText;
-    navigator.clipboard.writeText(ip);
-
+    navigator.clipboard.writeText(
+        document.getElementById("ip").innerText
+    );
     document.getElementById("ipMsg").style.display = "block";
 }
 
 function copyPort(){
-    let port = document.getElementById("port").innerText;
-    navigator.clipboard.writeText(port);
-
+    navigator.clipboard.writeText(
+        document.getElementById("port").innerText
+    );
     document.getElementById("portMsg").style.display = "block";
 }
 
